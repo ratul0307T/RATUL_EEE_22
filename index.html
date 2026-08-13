@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        /* CSS Styles */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 20px 10%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .hero img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .hero-text h3 {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .hero-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* News List */
+        .news-list {
+            list-style-position: inside;
+        }
+
+        .news-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            background-color: #ddd;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+            .hero-text p {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <h1>Your Name, PhD</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <!-- Hero / About Section -->
+        <div class="hero" id="about">
+            <!-- Replace 'your-photo.jpg' with a link to your actual image -->
+            <img src="https://via.placeholder.com/300x400" alt="Your Profile Picture">
+            
+            <div class="hero-text">
+                <h2>Your Name, PhD</h2>
+                <h3>Professor of Your Department</h3>
+                <p>Hello! Welcome to my academic portfolio. I am a Professor at [Your University]. This website is used to keep track of my academic and career practices, research publications, and to distribute instructional resources to my students.</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+
+        <!-- Recent News Section -->
+        <section id="news">
+            <h2>Recent News</h2>
+            <ul class="news-list">
+                <li><strong>August 2026:</strong> Title of your most recent published paper in [Journal Name]. Congratulations to all authors!</li>
+                <li><strong>July 2026:</strong> Presented our research on [Topic] at the [Conference Name].</li>
+                <li><strong>May 2026:</strong> Congratulations to my student [Student Name] for successfully completing their thesis defense.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p><strong>Office:</strong> Academic Building-2, Room No. 123</p>
+                <p><strong>Department:</strong> Department of Your Field, University Name</p>
+                <p><strong>Address:</strong> Your City, State, ZIP, Country</p>
+                <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p><strong>Tel:</strong> +123-456-7890</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" target="_blank">ResearchGate</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Google Scholar</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © Your Name (Last updated: August 2026)</p>
+    </footer>
+
+</body>
+</html>
