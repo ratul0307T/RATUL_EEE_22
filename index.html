@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Sadman Sakib Ratul - Resume</title>
     <style>
         /* CSS Styles */
         :root {
@@ -12,6 +12,7 @@
             --text-color: #333;
             --bg-color: #f9f9f9;
             --white: #ffffff;
+            --border-light: #e0e0e0;
         }
 
         * {
@@ -43,6 +44,7 @@
         header h1 {
             font-size: 1.5rem;
             color: var(--primary-color);
+            font-weight: 600;
         }
 
         nav a {
@@ -59,12 +61,12 @@
 
         /* Main Container */
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* Hero Section */
+        /* Hero / Profile Section */
         .hero {
             display: flex;
             align-items: center;
@@ -77,23 +79,24 @@
         }
 
         .hero img {
-            width: 300px;
-            height: 400px;
+            width: 250px;
+            height: 250px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 50%; /* Circle profile picture */
+            border: 4px solid var(--border-light);
         }
 
         .hero-text h2 {
             font-size: 2.5rem;
             color: var(--primary-color);
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .hero-text h3 {
             font-size: 1.2rem;
-            color: #666;
+            color: var(--accent-color);
             margin-bottom: 20px;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .hero-text p {
@@ -115,7 +118,7 @@
             background-color: var(--accent-color);
         }
 
-        /* Section Styling */
+        /* Resume Sections */
         section {
             background: var(--white);
             padding: 40px;
@@ -126,25 +129,70 @@
 
         section h2 {
             color: var(--primary-color);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             border-bottom: 2px solid var(--accent-color);
             display: inline-block;
             padding-bottom: 5px;
         }
 
-        /* News List */
-        .news-list {
-            list-style-position: inside;
+        /* Resume Items (Experience & Education) */
+        .resume-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-light);
         }
 
-        .news-list li {
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .news-list li:last-child {
+        .resume-item:last-child {
             border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .resume-item h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .resume-item .date-location {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .resume-item ul {
+            list-style-position: inside;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .resume-item ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .skill-category ul {
+            list-style-type: none;
+        }
+
+        .skill-category ul li {
+            background: var(--bg-color);
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            border-left: 3px solid var(--accent-color);
         }
 
         /* Contact Section */
@@ -164,6 +212,7 @@
             padding: 10px 15px;
             border-radius: 5px;
             color: var(--primary-color);
+            font-weight: 500;
             transition: 0.3s;
         }
 
@@ -188,12 +237,15 @@
                 text-align: center;
             }
             .hero img {
-                width: 100%;
-                max-width: 300px;
-                height: auto;
+                width: 200px;
+                height: 200px;
             }
-            .hero-text p {
-                text-align: center;
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
             }
         }
     </style>
@@ -202,54 +254,102 @@
 
     <!-- Navigation Header -->
     <header>
-        <h1>Your Name, PhD</h1>
+        <h1>Sadman Sakib Ratul</h1>
         <nav>
             <a href="#about">About</a>
-            <a href="#news">News</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <div class="container">
         
-        <!-- Hero / About Section -->
+        <!-- Profile Section -->
         <div class="hero" id="about">
-            <!-- Replace 'your-photo.jpg' with a link to your actual image -->
-            <img src="https://via.placeholder.com/300x400" alt="Your Profile Picture">
+            <!-- Replace the src link with your actual photo URL -->
+            <img src="https://via.placeholder.com/250" alt="Sadman Sakib Ratul">
             
             <div class="hero-text">
-                <h2>Your Name, PhD</h2>
-                <h3>Professor of Your Department</h3>
-                <p>Hello! Welcome to my academic portfolio. I am a Professor at [Your University]. This website is used to keep track of my academic and career practices, research publications, and to distribute instructional resources to my students.</p>
-                <a href="#contact" class="btn">Contact Me</a>
+                <h2>Sadman Sakib Ratul</h2>
+                <h3>Engineering Student & Educator</h3>
+                <p>Hello! I am a student at the Chittagong University of Engineering and Technology (CUET). I am passionate about technical problem-solving, digital design, and education. Alongside my academic pursuits, I am actively involved in technical workshops and provide professional tutoring to high school students.</p>
+                <a href="#contact" class="btn">Get in Touch</a>
             </div>
         </div>
 
-        <!-- Recent News Section -->
-        <section id="news">
-            <h2>Recent News</h2>
-            <ul class="news-list">
-                <li><strong>August 2026:</strong> Title of your most recent published paper in [Journal Name]. Congratulations to all authors!</li>
-                <li><strong>July 2026:</strong> Presented our research on [Topic] at the [Conference Name].</li>
-                <li><strong>May 2026:</strong> Congratulations to my student [Student Name] for successfully completing their thesis defense.</li>
-            </ul>
+        <!-- Education & Involvement Section -->
+        <section id="experience">
+            <h2>Education & Involvements</h2>
+            
+            <div class="resume-item">
+                <h4>Chittagong University of Engineering and Technology (CUET)</h4>
+                <div class="date-location">Current Student | Chattogram, Bangladesh</div>
+                <ul>
+                    <li>Active member of the IEEE Student Branch, participating in technical workshops.</li>
+                    <li>Participated in the GraphicIEEE Design Session (Jan 2025).</li>
+                    <li>Attended various workshops focusing on digital design tools and graphics design.</li>
+                </ul>
+            </div>
+
+            <div class="resume-item">
+                <h4>Professional Academic Tutor</h4>
+                <div class="date-location">TuitionSeba | Present</div>
+                <ul>
+                    <li>Provide structured tutoring in Physics to Grade 11 students.</li>
+                    <li>Lead tutoring sessions in Higher Mathematics for Grade 9 and Grade 11 students.</li>
+                    <li>Utilize platforms like TSC for accessing verified study materials to support student learning.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical & Creative Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Academic & Technical</h4>
+                    <ul>
+                        <li>Physics & Higher Mathematics</li>
+                        <li>Overleaf (LaTeX)</li>
+                        <li>Technical Research & Documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Design & Software</h4>
+                    <ul>
+                        <li>Digital Graphics Design</li>
+                        <li>Canvas</li>
+                        <li>AI Tool Integration (Gemini, ChatGPT)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Productivity Tools</h4>
+                    <ul>
+                        <li>Google Workspace</li>
+                        <li>Microsoft OneDrive</li>
+                        <li>Digital Subscription Management</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Me</h2>
             <div class="contact-info">
-                <p><strong>Office:</strong> Academic Building-2, Room No. 123</p>
-                <p><strong>Department:</strong> Department of Your Field, University Name</p>
-                <p><strong>Address:</strong> Your City, State, ZIP, Country</p>
+                <p><strong>University:</strong> Chittagong University of Engineering and Technology (CUET)</p>
+                <p><strong>Location:</strong> Chattogram, Bangladesh</p>
                 <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                <p><strong>Tel:</strong> +123-456-7890</p>
             </div>
             
             <div class="social-links">
-                <a href="#" target="_blank">ResearchGate</a>
+                <!-- Add your actual profile links in the href attributes -->
                 <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">Google Scholar</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Portfolio</a>
             </div>
         </section>
 
@@ -257,7 +357,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>Copyright © Your Name (Last updated: August 2026)</p>
+        <p>Copyright © Sadman Sakib Ratul (Last updated: August 2026)</p>
     </footer>
 
 </body>
